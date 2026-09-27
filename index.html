@@ -4,890 +4,946 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Mahreen's Birthday | Partners ADGHM in Crime™</title>
+<title>MAHREEN // CLASSIFIED BIRTHDAY FILE</title>
 
 <style>
-* {
-    box-sizing: border-box;
+*{
+  box-sizing:border-box;
 }
 
-body {
-    margin: 0;
-    font-family: Arial, Helvetica, sans-serif;
-    background: #0b0b18;
-    color: white;
-    overflow-x: hidden;
+html{
+  scroll-behavior:smooth;
 }
 
-/* BACKGROUND */
-body::before {
-    content: "";
-    position: fixed;
-    inset: 0;
-    background:
-        radial-gradient(circle at 20% 20%, rgba(255,105,180,.18), transparent 30%),
-        radial-gradient(circle at 80% 30%, rgba(130,100,255,.18), transparent 30%),
-        radial-gradient(circle at 50% 90%, rgba(70,220,255,.12), transparent 30%);
-    pointer-events: none;
+body{
+  margin:0;
+  background:#07070d;
+  color:#f5f5f5;
+  font-family:Arial,Helvetica,sans-serif;
+  overflow-x:hidden;
 }
 
-/* MAIN */
-.container {
-    width: min(900px, 92%);
-    margin: auto;
-    padding: 30px 0 60px;
+body:before{
+  content:"";
+  position:fixed;
+  inset:0;
+  pointer-events:none;
+  opacity:.07;
+  background:repeating-linear-gradient(
+    0deg,
+    transparent,
+    transparent 3px,
+    #fff 4px
+  );
+  z-index:1000;
 }
 
-header {
-    text-align: center;
-    padding: 50px 10px 30px;
+.container{
+  width:min(1000px,92%);
+  margin:auto;
 }
 
-.badge {
-    display: inline-block;
-    padding: 8px 14px;
-    border: 1px solid #777;
-    border-radius: 30px;
-    font-size: 12px;
-    letter-spacing: 2px;
-    color: #ddd;
+header{
+  min-height:100vh;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  text-align:center;
+  padding:30px 0;
 }
 
-h1 {
-    font-size: clamp(45px, 10vw, 90px);
-    margin: 20px 0 10px;
-    line-height: .9;
+.classified{
+  display:inline-block;
+  border:1px solid #555;
+  padding:8px 14px;
+  border-radius:30px;
+  font-size:12px;
+  letter-spacing:3px;
+  color:#aaa;
 }
 
-.gradient {
-    background: linear-gradient(90deg, #ff72c6, #a78bfa, #62e6ff);
-    color: transparent;
-    background-clip: text;
-    -webkit-background-clip: text;
+h1{
+  font-size:clamp(55px,12vw,120px);
+  margin:20px 0 5px;
+  line-height:.85;
+  letter-spacing:-5px;
 }
 
-.subtitle {
-    color: #b9bad0;
-    font-size: 18px;
+.glitch{
+  animation:glitch 1.8s infinite;
 }
 
-/* CARDS */
-.card {
-    background: rgba(22,22,43,.94);
-    border: 1px solid #41415f;
-    border-radius: 24px;
-    padding: 28px;
-    margin: 20px 0;
-    box-shadow: 0 15px 50px rgba(0,0,0,.3);
+@keyframes glitch{
+  0%,90%,100%{transform:none}
+  92%{transform:translate(3px,-2px)}
+  94%{transform:translate(-3px,2px)}
 }
 
-.classified {
-    border-color: #ff72c6;
+.subtitle{
+  font-size:22px;
+  color:#aaa;
+  margin-bottom:30px;
 }
 
-h2 {
-    margin-top: 0;
+button{
+  border:0;
+  padding:14px 20px;
+  border-radius:12px;
+  font-weight:900;
+  cursor:pointer;
+  background:#fff;
+  color:#08080d;
+  transition:.2s;
 }
 
-.message {
-    font-size: 18px;
-    line-height: 1.7;
-    color: #e5e4f2;
+button:hover{
+  transform:translateY(-3px) scale(1.02);
 }
 
-/* BUTTON */
-button {
-    border: none;
-    border-radius: 14px;
-    padding: 14px 20px;
-    font-size: 15px;
-    font-weight: bold;
-    cursor: pointer;
-    background: #ff8fd3;
-    color: #16101b;
-    transition: .2s;
+.big-button{
+  font-size:18px;
+  padding:17px 28px;
 }
 
-button:hover {
-    transform: translateY(-3px);
+.card{
+  background:#101018;
+  border:1px solid #272733;
+  border-radius:22px;
+  padding:28px;
+  margin:22px 0;
+  box-shadow:0 15px 45px #0008;
 }
 
-.secondary {
-    background: #aaa0ff;
+.hidden{
+  display:none;
 }
 
-/* STATS */
-.stats {
-    display: grid;
-    grid-template-columns: repeat(3,1fr);
-    gap: 12px;
-    margin: 25px 0;
+.section-title{
+  margin-top:0;
+  font-size:30px;
 }
 
-.stat {
-    background: #101026;
-    padding: 18px;
-    border-radius: 16px;
-    text-align: center;
+.terminal{
+  background:#020204;
+  border:1px solid #303038;
+  border-radius:15px;
+  padding:20px;
+  font-family:monospace;
+  color:#b9ffb9;
+  min-height:170px;
+  line-height:1.7;
 }
 
-.stat-title {
-    color: #aaaac5;
-    font-size: 12px;
+.cursor{
+  animation:blink 1s infinite;
 }
 
-.stat-value {
-    font-size: 27px;
-    font-weight: bold;
-    margin-top: 7px;
+@keyframes blink{
+  50%{opacity:0}
 }
 
-/* MEMBERS */
-.members {
-    display: grid;
-    grid-template-columns: repeat(2,1fr);
-    gap: 14px;
+.progress{
+  height:12px;
+  background:#22222c;
+  border-radius:20px;
+  overflow:hidden;
+  margin:15px 0;
 }
 
-.member {
-    background: #101026;
-    padding: 20px;
-    border-radius: 18px;
-    text-align: center;
-    border: 1px solid #30304d;
+.progress-bar{
+  width:0%;
+  height:100%;
+  background:#fff;
+  transition:1s;
 }
 
-.member .emoji {
-    font-size: 35px;
+.missions{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:15px;
 }
 
-.member-name {
-    font-size: 20px;
-    font-weight: bold;
-    margin-top: 8px;
+.mission{
+  padding:20px;
+  background:#171721;
+  border:1px solid #292936;
+  border-radius:16px;
+  text-align:center;
 }
 
-.member-title {
-    color: #c7bfff;
-    margin-top: 6px;
+.mission.done{
+  border-color:#fff;
+  background:#20202c;
 }
 
-/* QUIZ */
-.question {
-    background: #101026;
-    padding: 20px;
-    margin: 15px 0;
-    border-radius: 16px;
+.mission-icon{
+  font-size:40px;
 }
 
-.question label {
-    display: block;
-    padding: 9px;
-    border-radius: 9px;
-    cursor: pointer;
+.members{
+  display:grid;
+  grid-template-columns:repeat(2,1fr);
+  gap:15px;
 }
 
-.question label:hover {
-    background: #222240;
+.member{
+  padding:18px;
+  border-radius:16px;
+  background:#171721;
 }
 
-.result {
-    margin-top: 15px;
-    font-size: 18px;
-    font-weight: bold;
+.member strong{
+  display:block;
+  font-size:19px;
+  margin-bottom:7px;
 }
 
-/* CERTIFICATE */
-.certificate {
-    text-align: center;
-    border: 2px dashed #ff72c6;
+.member span{
+  color:#aaa;
 }
 
-.certificate .big {
-    font-size: 55px;
+.awards{
+  display:grid;
+  grid-template-columns:repeat(2,1fr);
+  gap:15px;
 }
 
-/* HIDDEN */
-.hidden {
-    display: none;
+.award{
+  padding:20px;
+  border-radius:16px;
+  background:#171721;
+  font-weight:bold;
 }
 
-/* FOOTER */
-footer {
-    text-align: center;
-    color: #77778f;
-    font-size: 13px;
-    margin-top: 35px;
+.award small{
+  display:block;
+  color:#999;
+  margin-top:7px;
+  font-weight:normal;
 }
 
-/* CONFETTI */
-.confetti {
-    position: fixed;
-    inset: 0;
-    pointer-events: none;
-    z-index: 100;
+.boxes{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:15px;
 }
 
-.confetti-piece {
-    position: absolute;
-    top: -20px;
-    width: 9px;
-    height: 16px;
-    animation: fall 4s linear forwards;
+.box{
+  min-height:150px;
+  border-radius:18px;
+  background:#181821;
+  border:1px solid #292936;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  text-align:center;
+  padding:15px;
+  cursor:pointer;
+  font-size:42px;
+  transition:.25s;
 }
 
-@keyframes fall {
-    to {
-        transform: translateY(110vh) rotate(720deg);
-    }
+.box:hover{
+  transform:rotate(-2deg) scale(1.03);
 }
 
-/* MOBILE */
-@media(max-width:650px) {
-    .stats {
-        grid-template-columns: 1fr;
-    }
+.box.open{
+  font-size:16px;
+  cursor:default;
+}
 
-    .members {
-        grid-template-columns: 1fr;
-    }
+.quiz-q{
+  margin:25px 0;
+}
+
+.option{
+  display:block;
+  background:#181821;
+  padding:12px;
+  border-radius:10px;
+  margin:8px 0;
+  cursor:pointer;
+}
+
+.option:hover{
+  background:#24242f;
+}
+
+#quizResult{
+  font-size:21px;
+  font-weight:bold;
+  margin-top:20px;
+}
+
+.spinner{
+  text-align:center;
+}
+
+#spinResult{
+  font-size:24px;
+  font-weight:900;
+  margin:25px 0;
+  min-height:35px;
+}
+
+.final{
+  text-align:center;
+  padding:40px 25px;
+}
+
+.final h2{
+  font-size:40px;
+}
+
+footer{
+  text-align:center;
+  padding:40px 10px;
+  color:#666;
+  font-size:13px;
+}
+
+.confetti{
+  position:fixed;
+  top:-20px;
+  width:9px;
+  height:15px;
+  z-index:2000;
+  animation:fall 3s linear forwards;
+  pointer-events:none;
+}
+
+@keyframes fall{
+  to{
+    transform:translate(var(--x),110vh) rotate(720deg);
+    opacity:0;
+  }
+}
+
+@media(max-width:700px){
+  .missions,
+  .members,
+  .awards,
+  .boxes{
+    grid-template-columns:1fr;
+  }
+
+  h1{
+    letter-spacing:-3px;
+  }
+
+  .card{
+    padding:21px;
+  }
 }
 </style>
 </head>
 
 <body>
 
-<div class="confetti" id="confetti"></div>
-
-<div class="container">
-
 <header>
+  <div class="container">
+    <div class="classified">TOP SECRET // PARTNERS ADGHM IN CRIME™</div>
 
-    <span class="badge">
-        PARTNERS ADGHM IN CRIME™ • CLASSIFIED
-    </span>
-
-    <h1>
-        <span class="gradient">
-            MAHREEN
-        </span>
-    </h1>
+    <h1 class="glitch">MAHREEN</h1>
 
     <div class="subtitle">
-        Birthday Headquarters 🎂
+      BIRTHDAY SECURITY HEADQUARTERS 🎂
     </div>
 
+    <p>
+      ⚠️ A classified birthday operation has been detected.
+    </p>
+
+    <button class="big-button" onclick="startMission()">
+      🔓 ACCESS CLASSIFIED FILE
+    </button>
+  </div>
 </header>
 
 
-<!-- CLASSIFIED INTRO -->
+<main class="container">
 
-<section class="card classified">
+<section id="terminalSection" class="card hidden">
 
-    <span class="badge">
-        🔐 TOP SECRET
-    </span>
+<h2 class="section-title">🖥️ SECURITY TERMINAL</h2>
 
-    <h2>
-        🚨 IMPORTANT ANNOUNCEMENT
-    </h2>
-
-    <p class="message">
-
-        After conducting an extremely serious investigation,
-        the Partners ADGHM in Crime™ organization has discovered
-        something absolutely shocking.
-
-        <br><br>
-
-        <strong>
-        IT'S MAHREEN'S BIRTHDAY!!! 🎂🎉
-        </strong>
-
-        <br><br>
-
-        Therefore, all Partners ADGHM in Crime are required
-        to report immediately for birthday celebrations.
-
-    </p>
-
-    <div class="stats">
-
-        <div class="stat">
-            <div class="stat-title">CHAOS</div>
-            <div class="stat-value">100% 🔥</div>
-        </div>
-
-        <div class="stat">
-            <div class="stat-title">PROCRASTINATION</div>
-            <div class="stat-value">∞ 😂</div>
-        </div>
-
-        <div class="stat">
-            <div class="stat-title">FRIENDSHIP</div>
-            <div class="stat-value">∞ 💖</div>
-        </div>
-
-    </div>
-
-    <button onclick="openFile()">
-        🔓 OPEN CLASSIFIED FILE
-    </button>
+<div class="terminal" id="terminal">
+  <span id="terminalText"></span><span class="cursor">█</span>
+</div>
 
 </section>
 
 
-<!-- SECRET CONTENT -->
-
-<div id="secret" class="hidden">
-
-
-<!-- BIRTHDAY MESSAGE -->
-
-<section class="card">
-
-    <h2>
-        🎂 HAPPY BIRTHDAY, MAHREEN!!!
-    </h2>
-
-    <p class="message">
-
-        Happy Birthday to the one and only
-
-        <strong>
-        CEO OF PROCRASTINATION™ 👑
-        </strong>
-
-        !!!
-
-        <br><br>
-
-        Somehow you have managed to survive another year
-        while postponing approximately 97% of everything.
-
-        Honestly?
-
-        <br><br>
-
-        <strong>
-        RESPECT. 😂
-        </strong>
-
-        <br><br>
-
-        We hope this year brings you tons of happiness,
-        amazing memories, ridiculous conversations,
-        and approximately zero boring days.
-
-        <br><br>
-
-        Stay exactly the same chaotic, hilarious person
-        we all know.
-
-        💗
-
-    </p>
-
-</section>
-
-
-<!-- THE FIVE -->
-
-<section class="card">
-
-    <h2>
-        👥 PARTNERS ADGHM IN CRIME™
-    </h2>
-
-    <p class="message">
-
-        Five people.
-        One friendship.
-        Absolutely no chance of behaving normally. 😂
-
-    </p>
-
-    <div class="members">
-
-        <div class="member">
-            <div class="emoji">👑</div>
-
-            <div class="member-name">
-                Ahsmita
-            </div>
-
-            <div class="member-title">
-                CEO of Partners ADGHM in Crime
-            </div>
-        </div>
-
-
-        <div class="member">
-            <div class="emoji">🎂</div>
-
-            <div class="member-name">
-                Mahreen
-            </div>
-
-            <div class="member-title">
-                CEO of Procrastination
-            </div>
-        </div>
-
-
-        <div class="member">
-            <div class="emoji">💥</div>
-
-            <div class="member-name">
-                Gitika
-            </div>
-
-            <div class="member-title">
-                Boss of Crimes
-            </div>
-        </div>
-
-
-        <div class="member">
-            <div class="emoji">🔥</div>
-
-            <div class="member-name">
-                Deetya
-            </div>
-
-            <div class="member-title">
-                Head of Chaos
-            </div>
-        </div>
-
-
-        <div class="member">
-            <div class="emoji">🛶</div>
-
-            <div class="member-name">
-                Hoshika
-            </div>
-
-            <div class="member-title">
-                BOATED™ Friend
-            </div>
-        </div>
-
-    </div>
-
-    <br>
-
-    <p class="message">
-
-        And yes...
-
-        <br><br>
-
-        <strong>
-        BOATED™
-        </strong>
-
-        is officially included because
-        the Baseline trend demanded it. 🛶😂
-
-    </p>
-
-</section>
-
-
-<!-- AWARDS -->
-
-<section class="card">
-
-    <h2>
-        🏆 MAHREEN'S OFFICIAL AWARDS
-    </h2>
-
-    <p class="message">
-        👑 <strong>CEO of Procrastination™</strong><br>
-        For repeatedly proving that "later" is a perfectly
-        valid time to do something.
-    </p>
-
-    <p class="message">
-        ⏰ <strong>Master of Last-Minute Operations</strong><br>
-        Deadline approaching? No problem. Probably.
-    </p>
-
-    <p class="message">
-        💥 <strong>Certified Partner ADGHM in Crime</strong><br>
-        Membership: PERMANENT.
-    </p>
-
-    <p class="message">
-        😂 <strong>Professional Chaos Participant</strong><br>
-        Somehow involved in everything.
-    </p>
-
-</section>
-
-
-<!-- QUIZ -->
-
-<section class="card">
-
-    <h2>
-        🕵️ CEO VERIFICATION TEST
-    </h2>
-
-    <p class="message">
-
-        Only the TRUE CEO of Procrastination™
-        can pass this highly scientific examination.
-
-    </p>
-
-
-    <div class="question">
-
-        <strong>
-        1. When should an assignment be started?
-        </strong>
-
-        <label>
-            <input type="radio" name="q1" value="a">
-            A. Immediately
-        </label>
-
-        <label>
-            <input type="radio" name="q1" value="b">
-            B. Tomorrow
-        </label>
-
-        <label>
-            <input type="radio" name="q1" value="c">
-            C. Five minutes before the deadline
-        </label>
-
-        <label>
-            <input type="radio" name="q1" value="d">
-            D. What assignment?
-        </label>
-
-    </div>
-
-
-    <div class="question">
-
-        <strong>
-        2. What is Mahreen's natural response to a deadline?
-        </strong>
-
-        <label>
-            <input type="radio" name="q2" value="a">
-            A. Start early
-        </label>
-
-        <label>
-            <input type="radio" name="q2" value="b">
-            B. Panic
-        </label>
-
-        <label>
-            <input type="radio" name="q2" value="c">
-            C. Procrastinate
-        </label>
-
-        <label>
-            <input type="radio" name="q2" value="d">
-            D. Procrastinate professionally
-        </label>
-
-    </div>
-
-
-    <div class="question">
-
-        <strong>
-        3. What is the Partners ADGHM in Crime™
-        friendship level?
-        </strong>
-
-        <label>
-            <input type="radio" name="q3" value="a">
-            A. Normal
-        </label>
-
-        <label>
-            <input type="radio" name="q3" value="b">
-            B. Slightly chaotic
-        </label>
-
-        <label>
-            <input type="radio" name="q3" value="c">
-            C. Legendary
-        </label>
-
-        <label>
-            <input type="radio" name="q3" value="d">
-            D. CLASSIFIED
-        </label>
-
-    </div>
-
-
-    <button onclick="checkQuiz()">
-        🧠 SUBMIT TEST
-    </button>
-
-    <div class="result" id="result"></div>
-
-</section>
-
-
-<!-- CERTIFICATE -->
-
-<section class="card certificate">
-
-    <div class="big">
-        👑
-    </div>
-
-    <h2>
-        OFFICIAL CERTIFICATE
-    </h2>
-
-    <p class="message">
-
-        This certificate officially confirms that
-
-        <br><br>
-
-        <strong>
-        MAHREEN
-        </strong>
-
-        <br><br>
-
-        is a permanent member and
-
-        <br>
-
-        <strong>
-        CEO OF PROCRASTINATION™
-        </strong>
-
-        <br><br>
-
-        of the
-
-        <br>
-
-        <strong>
-        PARTNERS ADGHM IN CRIME™
-        </strong>
-
-        organization.
-
-    </p>
-
-    <button
-        class="secondary"
-        onclick="celebrate()">
-
-        🎉 ACTIVATE BIRTHDAY MODE
-
-    </button>
-
-</section>
-
-
-<!-- FINAL MESSAGE -->
-
-<section class="card">
-
-    <h2>
-        💌 FINAL MESSAGE
-    </h2>
-
-    <p class="message">
-
-        Mahreen,
-
-        <br><br>
-
-        We may be five completely different people,
-        but somehow this group works.
-
-        <br><br>
-
-        Here's to more inside jokes,
-        more chaos,
-        more ridiculous conversations,
-        more Baseline moments,
-        more BOATED™ moments,
-        and many more memories together.
-
-        <br><br>
-
-        Whatever happens,
-
-        <strong>
-        PARTNERS ADGHM IN CRIME™ FOREVER. 💗
-        </strong>
-
-        <br><br>
-
-        Happy Birthday!!! 🎂🎉👑
-
-        <br><br>
-
-        — Ahsmita, Gitika, Deetya & Hoshika
-
-    </p>
-
-</section>
+<section id="missionsSection" class="card hidden">
+
+<h2 class="section-title">🎮 BIRTHDAY MISSION</h2>
+
+<p>
+Complete the three highly sophisticated security operations
+to unlock Mahreen's classified birthday message.
+</p>
+
+<div class="progress">
+  <div class="progress-bar" id="progress"></div>
+</div>
+
+<div class="missions">
+
+<div class="mission" id="mission1">
+  <div class="mission-icon">🕵️</div>
+  <h3>Mission 1</h3>
+  <p>Identify the CEO.</p>
+  <button onclick="missionOne()">IDENTIFY</button>
+</div>
+
+<div class="mission" id="mission2">
+  <div class="mission-icon">🛶</div>
+  <h3>Mission 2</h3>
+  <p>Activate BOATED™.</p>
+  <button onclick="missionTwo()">ACTIVATE</button>
+</div>
+
+<div class="mission" id="mission3">
+  <div class="mission-icon">💥</div>
+  <h3>Mission 3</h3>
+  <p>Cause controlled chaos.</p>
+  <button onclick="missionThree()">CHAOS</button>
+</div>
 
 </div>
+
+</section>
+
+
+<section id="message" class="card hidden">
+
+<h2 class="section-title">🎂 CLASSIFIED MESSAGE UNLOCKED</h2>
+
+<div style="font-size:50px;text-align:center;">
+🎉🎂🥳
+</div>
+
+<h2 style="text-align:center;font-size:35px;">
+HAPPY BIRTHDAY, MAHREEN!!!
+</h2>
+
+<p style="font-size:18px;line-height:1.7;">
+Congratulations. You have officially survived another year
+and somehow remained the undisputed
+<strong>CEO OF PROCRASTINATION™</strong>.
+</p>
+
+<p style="font-size:18px;line-height:1.7;">
+The Partners ADGHM in Crime™ organization would like to
+formally acknowledge your continued contribution to chaos,
+last-minute operations, questionable decisions, and extremely
+important nonsense.
+</p>
+
+<p style="font-size:18px;line-height:1.7;">
+May your birthday contain maximum cake, minimum homework,
+and absolutely no unnecessary responsibilities. 😂
+</p>
+
+</section>
+
+
+<section class="card">
+
+<h2 class="section-title">👥 PARTNERS ADGHM IN CRIME™</h2>
+
+<div class="members">
+
+<div class="member">
+<strong>👑 Ahsmita</strong>
+<span>CEO of Partners ADGHM in Crime</span>
+</div>
+
+<div class="member">
+<strong>😂 Mahreen</strong>
+<span>CEO of Procrastination</span>
+</div>
+
+<div class="member">
+<strong>🕵️ Gitika</strong>
+<span>Boss of Crimes</span>
+</div>
+
+<div class="member">
+<strong>🌪️ Deetya</strong>
+<span>Head of Chaos</span>
+</div>
+
+<div class="member">
+<strong>🛶 Hoshika</strong>
+<span>BOATED™ Friend</span>
+</div>
+
+</div>
+
+<p style="color:#999;margin-top:20px;">
+Five members. One organization. Zero explanation.
+</p>
+
+</section>
+
+
+<section class="card">
+
+<h2 class="section-title">🏆 OFFICIAL MAHREEN AWARDS</h2>
+
+<div class="awards">
+
+<div class="award">
+🏅 CEO OF PROCRASTINATION™
+<small>
+For consistently moving important tasks to "later."
+</small>
+</div>
+
+<div class="award">
+⏰ MASTER OF LAST-MINUTE OPERATIONS
+<small>
+For operating most efficiently when the deadline is dangerously close.
+</small>
+</div>
+
+<div class="award">
+🕵️ CERTIFIED PARTNER ADGHM
+<small>
+Official membership status: PERMANENT.
+</small>
+</div>
+
+<div class="award">
+🌪️ PROFESSIONAL CHAOS PARTICIPANT
+<small>
+Chaos contribution successfully recorded.
+</small>
+</div>
+
+</div>
+
+</section>
+
+
+<section class="card">
+
+<h2 class="section-title">🎁 MYSTERY BOXES</h2>
+
+<p>
+Three classified files. One of them contains something extremely important.
+Probably.
+</p>
+
+<div class="boxes">
+
+<div class="box" onclick="openBox(this,1)">
+🎁
+</div>
+
+<div class="box" onclick="openBox(this,2)">
+🎁
+</div>
+
+<div class="box" onclick="openBox(this,3)">
+🎁
+</div>
+
+</div>
+
+</section>
+
+
+<section class="card spinner">
+
+<h2 class="section-title">🎰 CHAOS GENERATOR</h2>
+
+<p>
+Press the button. Accept your fate.
+</p>
+
+<div id="spinResult">
+Waiting for chaos...
+</div>
+
+<button onclick="spinChaos()">
+🎲 GENERATE CHAOS
+</button>
+
+</section>
+
+
+<section class="card">
+
+<h2 class="section-title">🧠 CEO PROCRASTINATION™ QUIZ</h2>
+
+<div class="quiz-q">
+<h3>1. When should an assignment be started?</h3>
+
+<label class="option">
+<input type="radio" name="q1" value="A">
+A. Immediately
+</label>
+
+<label class="option">
+<input type="radio" name="q1" value="B">
+B. Tomorrow
+</label>
+
+<label class="option">
+<input type="radio" name="q1" value="C">
+C. Five minutes before the deadline
+</label>
+
+<label class="option">
+<input type="radio" name="q1" value="D">
+D. What assignment?
+</label>
+</div>
+
+
+<div class="quiz-q">
+<h3>2. Natural response to a deadline?</h3>
+
+<label class="option">
+<input type="radio" name="q2" value="A">
+A. Start early
+</label>
+
+<label class="option">
+<input type="radio" name="q2" value="B">
+B. Panic
+</label>
+
+<label class="option">
+<input type="radio" name="q2" value="C">
+C. Procrastinate
+</label>
+
+<label class="option">
+<input type="radio" name="q2" value="D">
+D. Procrastinate professionally
+</label>
+</div>
+
+
+<div class="quiz-q">
+<h3>3. Partners ADGHM in Crime friendship level?</h3>
+
+<label class="option">
+<input type="radio" name="q3" value="A">
+A. Normal
+</label>
+
+<label class="option">
+<input type="radio" name="q3" value="B">
+B. Slightly chaotic
+</label>
+
+<label class="option">
+<input type="radio" name="q3" value="C">
+C. Legendary
+</label>
+
+<label class="option">
+<input type="radio" name="q3" value="D">
+D. CLASSIFIED
+</label>
+</div>
+
+<button onclick="checkQuiz()">
+🔐 VERIFY CEO STATUS
+</button>
+
+<div id="quizResult"></div>
+
+</section>
+
+
+<section class="card final">
+
+<h2>📜 OFFICIAL CERTIFICATE</h2>
+
+<p>This certifies that</p>
+
+<h2>MAHREEN</h2>
+
+<p>
+is a permanent member and
+<strong>CEO OF PROCRASTINATION™</strong>
+</p>
+
+<p>
+of the legendary
+<strong>PARTNERS ADGHM IN CRIME™</strong>.
+</p>
+
+<hr style="border-color:#292936;margin:30px 0;">
+
+<p style="font-size:19px;line-height:1.7;">
+Mahreen, stay hilarious, stay chaotic, and never forget:
+your CEO position is permanent.
+😂🎂🎉
+</p>
+
+<p>
+<strong>
+— Ahsmita, Gitika, Deetya & Hoshika
+</strong>
+</p>
+
+<button onclick="celebrate()">
+🎉 CELEBRATE AGAIN
+</button>
+
+</section>
+
+</main>
 
 
 <footer>
-
-    PARTNERS ADGHM IN CRIME™ •
-    Friendship Department •
-    Established: "Don't ask." 😂
-
+PARTNERS ADGHM IN CRIME™
+<br>
+Friendship Department • Established: "Don't ask." 😂
 </footer>
-
-</div>
 
 
 <script>
 
-/* OPEN CLASSIFIED FILE */
+let completed=0;
 
-function openFile() {
+function startMission(){
 
-    document
-        .getElementById("secret")
-        .classList
-        .remove("hidden");
+  const terminalSection=document.getElementById("terminalSection");
+  const missions=document.getElementById("missionsSection");
 
-    document
-        .getElementById("secret")
-        .scrollIntoView({
-            behavior: "smooth"
-        });
+  terminalSection.classList.remove("hidden");
+
+  const lines=[
+    "INITIALIZING SECURITY SYSTEM...",
+    "Scanning organization database...",
+    "Searching for Mahreen...",
+    "IDENTITY CONFIRMED.",
+    "STATUS: CEO OF PROCRASTINATION™",
+    "Birthday protocol activated.",
+    "WARNING: EXTREME CHAOS DETECTED.",
+    "ACCESS GRANTED."
+  ];
+
+  let i=0;
+
+  function typeLine(){
+
+    if(i<lines.length){
+
+      document.getElementById("terminalText").innerHTML +=
+      lines[i]+"<br>";
+
+      i++;
+
+      setTimeout(typeLine,500);
+
+    }else{
+
+      missions.classList.remove("hidden");
+
+      missions.scrollIntoView({
+        behavior:"smooth"
+      });
+
+    }
+  }
+
+  typeLine();
+}
+
+
+function completeMission(number){
+
+  const mission=document.getElementById("mission"+number);
+
+  if(!mission.classList.contains("done")){
+
+    mission.classList.add("done");
+    completed++;
+
+    document.getElementById("progress").style.width=
+    (completed/3*100)+"%";
+
+    if(completed===3){
+
+      setTimeout(unlockMessage,700);
+
+    }
+
+  }
+
+}
+
+
+function missionOne(){
+
+  alert(
+    "IDENTIFICATION CONFIRMED.\n\n" +
+    "Name: Mahreen\n" +
+    "Position: CEO of Procrastination™\n" +
+    "Threat level: Extremely silly 😂"
+  );
+
+  completeMission(1);
+}
+
+
+function missionTwo(){
+
+  alert(
+    "🛶 BOATED™ ACTIVATION COMPLETE.\n\n" +
+    "BASELINE TREND CONNECTION: ESTABLISHED."
+  );
+
+  completeMission(2);
+}
+
+
+function missionThree(){
+
+  celebrate();
+
+  alert(
+    "💥 CONTROLLED CHAOS SUCCESSFUL.\n\n" +
+    "No actual crimes were committed.\n" +
+    "Probably."
+  );
+
+  completeMission(3);
+}
+
+
+function unlockMessage(){
+
+  const message=document.getElementById("message");
+
+  message.classList.remove("hidden");
+
+  celebrate();
+
+  message.scrollIntoView({
+    behavior:"smooth"
+  });
+}
+
+
+function openBox(box,number){
+
+  if(box.classList.contains("open")) return;
+
+  const surprises=[
+    "😂 CLASSIFIED REPORT:<br>Mahreen has procrastinated successfully.",
+    "🎂 SECRET SUPPLY:<br>Unlimited birthday cake authorization granted.",
+    "🏆 RARE ITEM:<br>Official CEO of Procrastination™ certificate."
+  ];
+
+  box.classList.add("open");
+
+  box.innerHTML=surprises[number-1];
+}
+
+
+function spinChaos(){
+
+  const chaos=[
+    "📚 You have homework. Ignore it professionally.",
+    "😂 A random laugh has been authorized.",
+    "🛶 BOATED™ STATUS: MAXIMUM.",
+    "🎂 Cake break approved.",
+    "🕵️ Classified mission: Do absolutely nothing.",
+    "🌪️ CHAOS LEVEL: 97%",
+    "⏰ Deadline detected. Procrastination activated.",
+    "🎉 Birthday celebration protocol: ON."
+  ];
+
+  const result=
+  chaos[Math.floor(Math.random()*chaos.length)];
+
+  document.getElementById("spinResult").textContent=result;
+}
+
+
+function checkQuiz(){
+
+  const answers={
+    q1:"D",
+    q2:"D",
+    q3:"D"
+  };
+
+  let score=0;
+
+  for(const q in answers){
+
+    const selected=
+    document.querySelector(
+      'input[name="'+q+'"]:checked'
+    );
+
+    if(selected && selected.value===answers[q]){
+      score++;
+    }
+  }
+
+  const result=document.getElementById("quizResult");
+
+  if(score===3){
+
+    result.textContent=
+    "🏆 3/3 — CEO STATUS VERIFIED. ABSOLUTE PROCRASTINATION LEGEND.";
 
     celebrate();
+
+  }else if(score===2){
+
+    result.textContent=
+    "😂 2/3 — Suspiciously qualified. Corporate training required.";
+
+  }else{
+
+    result.textContent=
+    "🚨 SECURITY ALERT — PROCRASTINATION CREDENTIALS UNDER REVIEW.";
+  }
 }
 
 
-/* CONFETTI */
+function celebrate(){
 
-function celebrate() {
+  for(let i=0;i<120;i++){
 
-    const box =
-        document.getElementById("confetti");
+    const c=document.createElement("div");
 
-    box.innerHTML = "";
+    c.className="confetti";
 
-    for (let i = 0; i < 100; i++) {
+    c.style.left=
+    Math.random()*100+"vw";
 
-        const piece =
-            document.createElement("div");
+    c.style.setProperty(
+      "--x",
+      (Math.random()*400-200)+"px"
+    );
 
-        piece.className =
-            "confetti-piece";
+    c.style.background=
+    ["#ff4d8d","#ffd84d","#62e6ff","#9b6cff","#71ff91"][
+      Math.floor(Math.random()*5)
+    ];
 
-        piece.style.left =
-            Math.random() * 100 + "vw";
+    c.style.animationDelay=
+    Math.random()+"s";
 
-        piece.style.animationDelay =
-            Math.random() * 1.5 + "s";
+    document.body.appendChild(c);
 
-        piece.style.animationDuration =
-            (2.5 + Math.random() * 2) + "s";
-
-        piece.style.background =
-            [
-                "#ff72c6",
-                "#a78bfa",
-                "#62e6ff",
-                "#ffe66d",
-                "#7df2a5"
-            ][
-                Math.floor(Math.random() * 5)
-            ];
-
-        box.appendChild(piece);
-    }
-
-    setTimeout(() => {
-
-        box.innerHTML = "";
-
-    }, 5500);
-}
-
-
-/* QUIZ */
-
-function checkQuiz() {
-
-    const answers = {
-
-        q1: "d",
-        q2: "d",
-        q3: "d"
-
-    };
-
-    let score = 0;
-
-    for (const question in answers) {
-
-        const chosen =
-            document.querySelector(
-                'input[name="' +
-                question +
-                '"]:checked'
-            );
-
-        if (
-            chosen &&
-            chosen.value === answers[question]
-        ) {
-
-            score++;
-
-        }
-
-    }
-
-    const result =
-        document.getElementById("result");
-
-
-    if (score === 3) {
-
-        result.textContent =
-            "👑 3/3 — CEO STATUS VERIFIED. MAHREEN IS OFFICIALLY THE CEO.";
-
-        celebrate();
-
-    }
-
-    else if (score === 2) {
-
-        result.textContent =
-            "😂 2/3 — Suspiciously qualified. More procrastination required.";
-
-    }
-
-    else {
-
-        result.textContent =
-            "🚨 " + score +
-            "/3 — SECURITY ALERT. CEO STATUS QUESTIONABLE.";
-
-    }
-
+    setTimeout(()=>{
+      c.remove();
+    },3500);
+  }
 }
 
 </script>
@@ -895,3 +951,6 @@ function checkQuiz() {
 </body>
 </html>
 ```
+
+
+     
